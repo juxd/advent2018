@@ -5,7 +5,7 @@ int main()
 {
   FILE *fp;
   int *counts;
-  char *string;
+  char string[30];
   int twos, threes;
 
   fp = fopen("input.in", "r");
@@ -38,4 +38,6 @@ int main()
   }
   printf("%d\n", twos * threes);
   fclose(fp);
+
+  return 0;
 }
