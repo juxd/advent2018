@@ -14,7 +14,6 @@ int main()
   int i = 0;
   int doing = 1;
   int d;
-  int* track;
   int* head;
 
   fp = fopen("input.in", "r");
@@ -31,6 +30,7 @@ int main()
     fseek(fp, 0, SEEK_SET);
   }
   printf("%d\n", i);
+  free(head);
   fclose(fp);
   return 0;
 }
