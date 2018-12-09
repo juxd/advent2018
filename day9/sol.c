@@ -27,7 +27,9 @@ node* handle_x(node* cur, int player, unsigned int* scores) {
   scores[player] += ptr->val;
   (ptr->prev)->next = ptr->next;
   (ptr->next)->prev = ptr->prev;
-  return ptr->next;
+  node* ret = ptr->next;
+  free(ptr);
+  return ret;
 }
 
 int main()
